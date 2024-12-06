@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-films - Dr. Greg Torda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            display: flex; /* Enables flexbox layout */
+            justify-content: space-between; /* Spaces elements out evenly across the header */
+            align-items: center; /* Vertically centers the content within the header */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            flex: 1; /* Allows the title to occupy the available space */
+            text-align: center; /* Centers the title text within its flex space */
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #0056b3;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #003f8a;
+        }
+        .film-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        .film {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .film img {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+        .film-title {
+            font-size: 1.2em;
+            margin: 10px;
+        }
+        .film-text {
+            padding: 10px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: left;
+            cursor: pointer;
+        }
+        .film-text span {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .expanded-text {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .expanded-text button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .expanded-text button:hover {
+            background-color: #0056b3;
+        }
+        .video-link {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin: 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .video-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleText(id) {
+            const textBox = document.getElementById(id);
+            textBox.style.display = textBox.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mini-films of places and events that inspired me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="film-container">
+        <!-- Film 1 -->
+        <div class="film">
+            <img src="https://img.youtube.com/vi/d374l8gsDZQ/hqdefault.jpg" alt="The whales of Kamay">
+            <h2 class="film-title">The whales of Kamay</h2>
+            <p class="film-text" onclick="toggleText('text1')">
+                Humpback whales embark on a remarkable seasonal migration...
+                <span>(Read more)</span>
+            </p>
+            <div id="text1" class="expanded-text">
+                Humpback whales embark on a remarkable seasonal migration, spending their summers feeding in the nutrient-rich polar waters and their winters in tropical seas, where they socialize, mate, and give birth. Along the east coast of Australia, these majestic creatures can often be seen near Sydney. Pregnant and well-fed, humpback mothers typically appear in May and June as they travel northward, and they return with their calves from September to October, heading back to the icy waters of Antarctica.
+                <button onclick="toggleText('text1')">Close</button>
+            </div>
+            <a href="https://youtu.be/d374l8gsDZQ" target="_blank" class="video-link">Watch on YouTube</a>
+        </div>
+        <!-- Film 2 -->
+        <div class="film">
+            <img src="https://img.youtube.com/vi/IzDDNREWDvk/hqdefault.jpg" alt="The wild hucul of Hungary">
+            <h2 class="film-title">The wild hucul of Hungary</h2>
+            <p class="film-text" onclick="toggleText('text2')">
+                The wild Hucul horses of the Aggtelek National Park...
+                <span>(Read more)</span>
+            </p>
+            <div id="text2" class="expanded-text">
+                The wild Hucul horses of the Aggtelek National Park, Hungary, are a living link to a bygone era, embodying the rugged resilience of the Carpathian region. These hardy horses, often called "the little horse of the mountains," are direct descendants of ancient breeds used for work and transport in harsh mountain terrains.
+                <button onclick="toggleText('text2')">Close</button>
+            </div>
+            <a href="https://youtu.be/IzDDNREWDvk" target="_blank" class="video-link">Watch on YouTube</a>
+        </div>
+        <!-- Film 3 -->
+        <div class="film">
+            <img src="https://img.youtube.com/vi/D_S2FOmlgRA/hqdefault.jpg" alt="Lady Musgrave Island">
+            <h2 class="film-title">Lady Musgrave Island</h2>
+            <p class="film-text" onclick="toggleText('text3')">
+                One of my favourite islands of the Great Barrier Reef...
+                <span>(Read more)</span>
+            </p>
+            <div id="text3" class="expanded-text">
+                One of my favourite islands of the Great Barrier Reef is Lady Musgrave Island. Nestled within the Capricornia Cays National Park, Lady Musgrave Island is a breathtaking gem that captures the essence of marine and island beauty. Its (almost) fully enclosed lagoon, one of the few in the region, provides a natural safe haven for marine life.
+                <button onclick="toggleText('text3')">Close</button>
+            </div>
+            <a href="https://youtu.be/D_S2FOmlgRA" target="_blank" class="video-link">Watch on YouTube</a>
+        </div>
+        <!-- Film 4 -->
+        <div class="film">
+            <img src="https://img.youtube.com/vi/XX0uE4mwDP4/hqdefault.jpg" alt="Mallorca – island of a thousand faces">
+            <h2 class="film-title">Mallorca – island of a thousand faces</h2>
+            <p class="film-text" onclick="toggleText('text4')">
+                Nestled in the Mediterranean Sea, Mallorca is a captivating blend...
+                <span>(Read more)</span>
+            </p>
+            <div id="text4" class="expanded-text">
+                Nestled in the Mediterranean Sea, Mallorca is a captivating blend of nature, history, and culture. This small Balearic Island offers a stunning array of landscapes - from pristine beaches and rugged cliffs to soaring mountains, ancient olive groves, and charming villages steeped in history.
+                <button onclick="toggleText('text4')">Close</button>
+            </div>
+            <a href="https://youtu.be/XX0uE4mwDP4" target="_blank" class="video-link">Watch on YouTube</a>
+        </div>
+        <!-- Film 5 -->
+        <div class="film">
+            <img src="https://img.youtube.com/vi/mTxdkkpzUSk/hqdefault.jpg" alt="Morning yoga">
+            <h2 class="film-title">Morning yoga</h2>
+            <p class="film-text" onclick="toggleText('text5')">
+                A departure from my usual mini-films, but I couldn’t resist capturing this moment...
+                <span>(Read more)</span>
+            </p>
+            <div id="text5" class="expanded-text">
+                A departure from my usual mini-films, but I couldn’t resist capturing this moment. The stunning Whitsunday Islands, a diverse archipelago of islands carved with deep inlets, white sandy beaches, and vibrant coral reefs, served as my home for about four weeks.
+                <button onclick="toggleText('text5')">Close</button>
+            </div>
+            <a href="https://youtu.be/mTxdkkpzUSk" target="_blank" class="video-link">Watch on YouTube</a>
+        </div>
+    </div>
+</body>
+</html>

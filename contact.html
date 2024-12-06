@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dr. Greg Torda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            flex: 1;
+            text-align: center;
+        }
+        .nav-button {
+            text-decoration: none;
+            color: white;
+            background-color: #0056b3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #003f8a;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-size: 1em;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Dr. Greg Torda</h1>
+        <a href="index.html" class="nav-button">Home</a>
+    </header>
+    <form action="https://formspree.io/f/mjkvdvyn" method="POST">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Your email address">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+    <footer>
+        <p>© 2024 Dr. Greg Torda. Built with simplicity and hosted on GitHub Pages.</p>
+    </footer>
+</body>
+</html>
