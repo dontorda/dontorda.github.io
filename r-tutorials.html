@@ -29,6 +29,9 @@
             padding: 20px;
         }
         .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             margin: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -39,7 +42,9 @@
         }
         .project img {
             width: 100%;
-            height: auto;
+            height: 200px; /* Fixed height for all images */
+            object-fit: contain; /* Fit the image without cropping */
+            background-color: #f4f4f9; /* Optional: adds a background to fill empty space */
         }
         .project h2 {
             font-size: 1.2em;
@@ -79,17 +84,17 @@
     <div class="project-container">
         <!-- Project 1 -->
         <div class="project">
-            <img src="fun-with-terraclim.jpg" alt="Fun with TerraClim">
-            <h2>Fun with TerraClim</h2>
-            <p>Discover how to analyze TerraClim data and create stunning visualizations.</p>
-            <a href="fun-with-terraclim.html" target="_blank">View Tutorial</a>
+            <img src="intro_TerraClim.png" alt="Fun intro to TerraClim">
+            <h2>Fun intro to TerraClim</h2>
+            <p>Discover how to download and analyze TerraClim data.</p>
+            <a href="climate_web.html" target="_blank">View Tutorial</a>
         </div>
         <!-- Project 2 -->
         <div class="project">
-            <img src="shiny-terraclim.jpg" alt="Shiny TerraClim App">
+            <img src="shinyApp.png" alt="Shiny TerraClim App">
             <h2>Shiny App to Access TerraClim</h2>
             <p>Access TerraClim data dynamically with this interactive Shiny app.</p>
-            <a href="shiny-terraclim-app.html" target="_blank">Explore App</a>
+            <a href="https://dontorda.shinyapps.io/globalpoint_app/" target="_blank">Explore App</a>
         </div>
     </div>
     <footer>
