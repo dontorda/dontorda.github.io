@@ -17,10 +17,31 @@
             padding: 20px;
             background-color: #007bff;
             color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
             font-size: 2em;
+            flex: 1;
+            text-align: center;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-button {
+            text-decoration: none;
+            color: white;
+            background-color: #0056b3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #003f8a;
         }
         .project-container {
             display: flex;
@@ -78,8 +99,11 @@
 </head>
 <body>
     <header>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </div>
         <h1>R Tutorials</h1>
-        <p>A collection of fun and useful projects in R.</p>
     </header>
     <div class="project-container">
         <!-- Project 1 -->
